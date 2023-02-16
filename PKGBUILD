@@ -19,8 +19,6 @@ license=(MIT)
 source=(https://github.com/GPUOpen-Drivers/AMDVLK/releases/download/v-${major}/amdvlk_${major}_amd64.deb
         https://github.com/GPUOpen-Drivers/AMDVLK/releases/download/v-${major}/amdvlk_${major}_i386.deb)
 
-# extracts a debian package
-# $1: deb file to extract
 extract_deb(){
   local tmpdir="$(basename "${1%.deb}")"
   rm -Rf "$tmpdir"
@@ -30,9 +28,6 @@ extract_deb(){
   tar -C "${pkgdir}" -xf data.tar.gz
 }
 
-# move ubuntu specific /usr/lib/x86_64-linux-gnu to /usr/lib
-# $1: debian package library dir (goes from opt/amdgpu or opt/amdgpu-pro and from x86_64 or i386)
-# $2: arch package library dir (goes to usr/lib or usr/lib32)
 move_libdir(){
   local deb_libdir="$1"
   local arch_libdir="$2"
@@ -46,7 +41,6 @@ move_libdir(){
   fi
 }
 
-rm -rf "$pkgdir"/usr/share/doc# move copyright file to proper place and remove debian changelog
 move_copyright(){
   find ${pkgdir}/usr/share/doc -name "changelog.Debian.gz" -delete
   mkdir -p ${pkgdir}/usr/share/licenses/${pkgname}
