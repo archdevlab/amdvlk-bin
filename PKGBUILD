@@ -71,6 +71,7 @@ package_amdvlk(){
 
 package_lib32-amdvlk(){
   pkgdesc="AMD's standalone Vulkan driver (32-bit)"
+  depends=(amdvlk=${major})
 
   extract_deb "${srcdir}"/amdvlk_${major}_i386.deb
   
