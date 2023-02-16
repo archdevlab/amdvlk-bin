@@ -13,6 +13,7 @@ pkgbase=amdvlk-bin
 pkgname=(amdvlk-bin lib32-amdvlk-bin)
 pkgver=${major}
 pkgrel=1
+arch=(x86_64)
 url='https://github.com/GPUOpen-Drivers/AMDVLK'
 license=(MIT)
 source=(https://github.com/GPUOpen-Drivers/AMDVLK/releases/download/v-${major}/amdvlk_${major}_amd64.deb
