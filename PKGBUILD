@@ -50,6 +50,7 @@ move_copyright(){
 
 package_amdvlk-bin(){
   pkgdesc="AMD's standalone Vulkan driver"
+  arch=(x86_64)
   conflicts=(amdvlk)
   provides=(amdvlk vulkan-driver)
 
@@ -73,6 +74,7 @@ package_amdvlk-bin(){
 
 package_lib32-amdvlk-bin(){
   pkgdesc="AMD's standalone Vulkan driver (32-bit)"
+  arch=(i686 x86_64)
   depends=(amdvlk-bin=${major})
   conflicts=(lib32-amdvlk)
   provides=(lib32-amdvlk lib32-vulkan-driver)
