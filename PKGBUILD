@@ -9,8 +9,8 @@
 
 major=2023.Q1.1
 
-pkgbase=amdvlk
-pkgname=(amdvlk lib32-amdvlk)
+pkgbase=amdvlk-bin
+pkgname=(amdvlk-bin lib32-amdvlk-bin)
 pkgver=${major}
 pkgrel=1
 arch=(x86_64)
@@ -48,7 +48,7 @@ move_copyright(){
   find ${pkgdir}/usr/share/doc -type d -empty -delete
 }
 
-package_amdvlk(){
+package_amdvlk-bin(){
   pkgdesc="AMD's standalone Vulkan driver"
 
   extract_deb "${srcdir}"/amdvlk_${major}_amd64.deb
@@ -69,9 +69,9 @@ package_amdvlk(){
   chmod -R 755 "$pkgdir"/usr
 }
 
-package_lib32-amdvlk(){
+package_lib32-amdvlk-bin(){
   pkgdesc="AMD's standalone Vulkan driver (32-bit)"
-  depends=(amdvlk=${major})
+  depends=(amdvlk-bin=${major})
 
   extract_deb "${srcdir}"/amdvlk_${major}_i386.deb
   
