@@ -50,6 +50,8 @@ move_copyright(){
 
 package_amdvlk-bin(){
   pkgdesc="AMD's standalone Vulkan driver"
+  conflicts=(amdvlk)
+  provides=(amdvlk vulkan-driver)
 
   extract_deb "${srcdir}"/amdvlk_${major}_amd64.deb
   
@@ -61,7 +63,7 @@ package_amdvlk-bin(){
   mv "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd64.json "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd64.json.hide
   
   move_copyright
-  mv "$pkgdir"/usr/share/doc/amdvlk/LICENSE.txt "$pkgdir"/usr/share/licenses/amdvlk/
+  mv "$pkgdir"/usr/share/doc/amdvlk/LICENSE.txt "$pkgdir"/usr/share/licenses/${pkgname}/
   rm -rf "$pkgdir"/usr/share/doc
 
   # fix package file permission
@@ -72,6 +74,8 @@ package_amdvlk-bin(){
 package_lib32-amdvlk-bin(){
   pkgdesc="AMD's standalone Vulkan driver (32-bit)"
   depends=(amdvlk-bin=${major})
+  conflicts=(lib32-amdvlk)
+  provides=(lib32-amdvlk lib32-vulkan-driver)
 
   extract_deb "${srcdir}"/amdvlk_${major}_i386.deb
   
@@ -86,7 +90,7 @@ package_lib32-amdvlk-bin(){
   mv "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd32.json "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd32.json.hide
   
   move_copyright
-  mv "$pkgdir"/usr/share/doc/amdvlk/LICENSE.txt "$pkgdir"/usr/share/licenses/lib32-amdvlk/
+  mv "$pkgdir"/usr/share/doc/amdvlk/LICENSE.txt "$pkgdir"/usr/share/licenses/${pkgname}/
   rm -rf "$pkgdir"/usr/share/doc
   
   # fix package file permission
