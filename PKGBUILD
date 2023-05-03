@@ -7,7 +7,7 @@
 
 #Maintainer: blacksky3 <https://github.com/blacksky3>
 
-major=2023.Q1.3
+major=2023.Q2.1
 
 pkgbase=amdvlk-bin
 pkgname=(amdvlk-bin lib32-amdvlk-bin)
@@ -55,14 +55,14 @@ package_amdvlk-bin(){
   provides=(amdvlk vulkan-driver)
 
   extract_deb "${srcdir}"/amdvlk_${major}_amd64.deb
-  
+
   move_libdir "usr/lib/x86_64-linux-gnu" "usr/lib"
   move_libdir "etc" "usr/share"
-  
+
   sed -i 's|/x86_64-linux-gnu||' "$pkgdir/"usr/share/vulkan/icd.d/amd_icd64.json
   sed -i 's|/x86_64-linux-gnu||' "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd64.json
   mv "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd64.json "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd64.json.hide
-  
+
   move_copyright
   mv "$pkgdir"/usr/share/doc/amdvlk/LICENSE.txt "$pkgdir"/usr/share/licenses/${pkgname}/
   rm -rf "$pkgdir"/usr/share/doc
@@ -80,25 +80,25 @@ package_lib32-amdvlk-bin(){
   provides=(lib32-amdvlk lib32-vulkan-driver)
 
   extract_deb "${srcdir}"/amdvlk_${major}_i386.deb
-  
+
   move_libdir "usr/lib/i386-linux-gnu" "usr/lib32"
   move_libdir "etc" "usr/share"
-  
+
   sed -i 's|/i386-linux-gnu||' "$pkgdir/"usr/share/vulkan/icd.d/amd_icd32.json
   sed -i 's|/lib|/lib32|' "$pkgdir/"usr/share/vulkan/icd.d/amd_icd32.json
   sed -i 's|/i386-linux-gnu||' "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd32.json
   sed -i 's|/lib|/lib32|' "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd32.json
-  
+
   mv "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd32.json "$pkgdir/"usr/share/vulkan/implicit_layer.d/amd_icd32.json.hide
-  
+
   move_copyright
   mv "$pkgdir"/usr/share/doc/amdvlk/LICENSE.txt "$pkgdir"/usr/share/licenses/${pkgname}/
   rm -rf "$pkgdir"/usr/share/doc
-  
+
   # fix package file permission
   # filesystem: 755  package: 775
   chmod -R 755 "$pkgdir"/usr
 }
 
-sha256sums=('d815d90358c55716057f1579033e7d36ee1c7d5b35c82bbbd9cf3803d0de78b6'
-            '2b08d4c3e21be337b986ab173e0571e867db53decbcc3e101e5fae0afeb25aa4')
+sha256sums=('f6ea64c26d4fe7e76076370fcf97f742feeb44b1d9588118ef5cb0c6d0b1f426'
+            '178b20be85966cd92be3286e5e0fb7f0d0d233c2e5605501287b82201bf90c69')
