@@ -7,7 +7,7 @@
 
 #Maintainer: blacksky3 <https://github.com/blacksky3>
 
-major=2023.Q2.1
+major=2023.Q2.3
 
 pkgbase=amdvlk-bin
 pkgname=(amdvlk-bin lib32-amdvlk-bin)
@@ -100,5 +100,5 @@ package_lib32-amdvlk-bin(){
   chmod -R 755 "$pkgdir"/usr
 }
 
-sha256sums=('f6ea64c26d4fe7e76076370fcf97f742feeb44b1d9588118ef5cb0c6d0b1f426'
-            '178b20be85966cd92be3286e5e0fb7f0d0d233c2e5605501287b82201bf90c69')
+sha256sums=('4915b9bc7946c55b09784b5696714ea90081006bc8191350bc6dd99f7ff26fa5'
+            '4a428eb8b007db508dafb55a988f5830cc3922125b3fac63e7f751ab991503cf')
