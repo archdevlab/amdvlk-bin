@@ -102,3 +102,5 @@ package_lib32-amdvlk-bin(){
 
 sha256sums=('4915b9bc7946c55b09784b5696714ea90081006bc8191350bc6dd99f7ff26fa5'
             '4a428eb8b007db508dafb55a988f5830cc3922125b3fac63e7f751ab991503cf')
+
+# vim:set ts=8 sts=2 sw=2 et:
