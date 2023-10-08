@@ -7,7 +7,7 @@
 
 #Maintainer: blacksky3 <https://github.com/blacksky3>
 
-major=2023.Q2.3
+major=2023.Q3.3
 
 pkgbase=amdvlk-bin
 pkgname=(amdvlk-bin lib32-amdvlk-bin)
@@ -100,7 +100,7 @@ package_lib32-amdvlk-bin(){
   chmod -R 755 "$pkgdir"/usr
 }
 
-sha256sums=('4915b9bc7946c55b09784b5696714ea90081006bc8191350bc6dd99f7ff26fa5'
-            '4a428eb8b007db508dafb55a988f5830cc3922125b3fac63e7f751ab991503cf')
+sha256sums=('b57999662c1aaa9e6eb1d436675a657aa416e2ed5da6dca9c753796d1b8fa8f4'
+            '358a6ab08680c7163a925de426b3996db69a8cd9f372f6b78427e28d57ffc7ad')
 
 # vim:set ts=8 sts=2 sw=2 et:
