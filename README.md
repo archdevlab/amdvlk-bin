@@ -30,3 +30,12 @@ The AMD Open Source Driver for Vulkan is designed to support the following featu
 - Built-in debug and profiling tools
 - Mid-command buffer preemption and SR-IOV virtualization
 
+### Prebuild package
+
+Prebuild package are available at https://repo.archdevlab.org/x86_64/amdvlk
+
+You can add this repo to your pacman.conf
+
+    [amdvlk]
+    SigLevel = Optional TrustAll
+    Server = https://repo.archdevlab.org/$arch/$repo
