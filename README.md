@@ -32,10 +32,10 @@ The AMD Open Source Driver for Vulkan is designed to support the following featu
 
 ### Prebuild package
 
-Prebuild package are available at https://repo.archdevlab.org/x86_64/amdvlk
+Prebuild package are available at https://repo.archdevlab.org/x86_64/amdvlk-bin
 
 You can add this repo to your pacman.conf
 
-    [amdvlk]
+    [amdvlk-bin]
     SigLevel = Optional TrustAll
     Server = https://repo.archdevlab.org/$arch/$repo
