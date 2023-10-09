@@ -30,6 +30,27 @@ The AMD Open Source Driver for Vulkan is designed to support the following featu
 - Built-in debug and profiling tools
 - Mid-command buffer preemption and SR-IOV virtualization
 
+## Profile
+
+To switch the defualt driver for Vulkan and OpenGL you can use this script in /etc/profile.d/
+
+    #!/usr/bin/bash
+
+    ICD_DIR="/usr/share/vulkan/icd.d"
+
+    AMDGPUPROGL64_DIR="/usr/lib/amdgpu-pro"
+
+    AMDGPUPROGL32_DIR="/usr/lib32/amdgpu-pro"
+
+    # RADV
+    #export VK_ICD_FILENAMES="${ICD_DIR}/radeon_icd.i686.json:${ICD_DIR}/radeon_icd.x86_64.json"
+
+    # AMDVLK
+    #export VK_ICD_FILENAMES="${ICD_DIR}/amd_icd32.json:${ICD_DIR}/amd_icd64.json"
+
+    # AMDGPU-PRO
+    #export VK_ICD_FILENAMES="${ICD_DIR}/amd_pro_icd32.json:${ICD_DIR}/amd_pro_icd64.json"
+
 ### Prebuild package
 
 Prebuild package are available at https://repo.archdevlab.org/x86_64/amdvlk-bin
