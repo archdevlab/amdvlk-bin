@@ -19,3 +19,14 @@ Radeon™ Pro WX 9100, x200 Series            |
 Radeon™ Pro W5700/W5500 Series              |
 
 For Pre-Polaris and Pre-Raven GPUs, please use v-2021.Q2.5 or older release
+
+##Feature Support and Performance
+
+The AMD Open Source Driver for Vulkan is designed to support the following features:
+
+- Vulkan 1.3
+- More than 30 extensions
+- Radeon™ GPUProfiler tracing
+- Built-in debug and profiling tools
+- Mid-command buffer preemption and SR-IOV virtualization
+
