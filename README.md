@@ -18,7 +18,7 @@ Radeon™ RX 400/500 Series                   |
 Radeon™ Pro WX 9100, x200 Series            |
 Radeon™ Pro W5700/W5500 Series              |
 
-For Pre-Polaris and Pre-Raven GPUs, please use v-2021.Q2.5 or older release
+For Pre-Polaris and Pre-Raven GPUs, please use v-2021.Q2.5 or older release.
 
 ## Feature Support and Performance
 
@@ -37,10 +37,6 @@ To switch the defualt driver for Vulkan and OpenGL you can use this script in /e
     #!/usr/bin/bash
 
     ICD_DIR="/usr/share/vulkan/icd.d"
-
-    AMDGPUPROGL64_DIR="/usr/lib/amdgpu-pro"
-
-    AMDGPUPROGL32_DIR="/usr/lib32/amdgpu-pro"
 
     # RADV
     #export VK_ICD_FILENAMES="${ICD_DIR}/radeon_icd.i686.json:${ICD_DIR}/radeon_icd.x86_64.json"
