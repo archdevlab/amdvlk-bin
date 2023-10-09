@@ -17,3 +17,5 @@ Radeon™ RX Vega Series                      |
 Radeon™ RX 400/500 Series                   |
 Radeon™ Pro WX 9100, x200 Series            |
 Radeon™ Pro W5700/W5500 Series              |
+
+For Pre-Polaris and Pre-Raven GPUs, please use v-2021.Q2.5 or older release
