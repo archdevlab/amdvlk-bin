@@ -14,8 +14,6 @@ Radeon™ RX 7900/7800/7700/7600 Series       |
 Radeon™ RX 6900/6800/6700/6600/6500 Series  |
 Radeon™ RX 5700/5600/5500 Series            |
 Radeon™ Pro W5700/W5500 Series              |
-
-### v-2023.Q3.3 and lower
                                             
 Supported GPUs v-2023.Q3.3 and lower        |
 -----                                       |
