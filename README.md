@@ -8,7 +8,7 @@ https://github.com/GPUOpen-Drivers/AMDVLK
 
 ## Supported GPUs
 
-Supported GPUs                              |
+Supported GPUs v-2023.Q4.1 and newer        |
 -----                                       |
 Radeon™ RX 7900/7800/7700/7600 Series       |
 Radeon™ RX 6900/6800/6700/6600/6500 Series  |
@@ -17,7 +17,7 @@ Radeon™ Pro W5700/W5500 Series              |
 
 ### v-2023.Q3.3 and lower
                                             
-Supported GPUs                              |
+Supported GPUs v-2023.Q3.3 and lower        |
 -----                                       |
 Radeon™ RX 7900/7800/7700/7600 Series       |
 Radeon™ RX 6900/6800/6700/6600/6500 Series  |
