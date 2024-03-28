@@ -32,10 +32,17 @@ For Pre-Polaris and Pre-Raven GPUs, please use v-2021.Q2.5 or older release.
 The AMD Open Source Driver for Vulkan is designed to support the following features:
 
 - Vulkan 1.3
-- More than 30 extensions
+- More than 170 extensions
 - Radeon™ GPUProfiler tracing
 - Built-in debug and profiling tools
 - Mid-command buffer preemption and SR-IOV virtualization
+
+The following features and improvements are planned in future releases (Please refer to Release Notes for update of each release):
+
+- Upcoming versions of the Vulkan API
+- Hardware performance counter collection through RenderDoc
+- LLPC optimizations to improve GPU-limited performance and compile time
+- Optimizations to improve CPU-limited performance
 
 ## Profile
 
